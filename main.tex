@@ -4,7 +4,10 @@
 \usepackage{layout}
 \usepackage{blindtext}
 \usepackage[letterpaper, total={7.5in, 10in}]{geometry}
-
+\newcounter{equationCustom}
+\renewcommand{\theequationCustom}{\text{\Roman{equationCustom}})\quad}
+\newcommand{\cellnum}{\refstepcounter{equationCustom}{\theequationCustom}}
+    
 \title{Math Study Sheets}
 \author{Gabriel Garcia, Ethan Woolard}
 \date{21th October 2026}
@@ -15,7 +18,6 @@
 \section*{Trig Properties}
 
 \section*{Unit 3}
-%\arabic{footnote}
 \begin{minipage}[t]{0.45\textwidth}
     \centering
     \begin{gather}
@@ -33,15 +35,15 @@
 \begin{minipage}[t]{0.45\textwidth}
     \centering
     \begin{align*}
-        \sin u' &= \cos u \cdot u' & \csc u' &= -\csc u \cdot \cot u \cdot u' \\
-        \cos u' &= -\sin u \cdot u' & \sec u' &= \sec u \cdot \tan u \cdot u' \\
-        \tan u' &= \sec^2 u \cdot u' & \cot u' &= -\csc^2 u \cdot u' \\
-        \sin^{-1} u' &= \frac{u'}{\sqrt{1-u^2}} & \csc^{-1} u' &= \frac{-u'}{\sqrt{u^2-1}} \\
-        \cos^{-1} u' &= \frac{-u'}{\sqrt{1-u^2}} & \sec^{-1} u' &= \frac{u'}{\sqrt{u^2-1}} \\
-        \tan^{-1} u' &= \frac{u'}{u^2+1} & \cot^{-1} u' &= \frac{-u'}{u^2+1}
+        \cellnum \sin u' &= \cos u \cdot u'  & \cellnum  \csc u' &= -\csc u \cdot \cot u \cdot u' \\
+        \cellnum \cos u' &= -\sin u \cdot u' & \cellnum  \sec u' &= \sec u \cdot \tan u \cdot u' \\
+        \cellnum \tan u' &= \sec^2 u \cdot u' & \cellnum  \cot u' &= -\csc^2 u \cdot u' \\
+        \cellnum \sin^{-1} u' &= \frac{u'}{\sqrt{1-u^2}}  & \cellnum  \csc^{-1} u' &= \frac{-u'}{u\sqrt{u^2-1}} \\ % so th
+        \cellnum \cos^{-1} u' &= \frac{-u'}{\sqrt{1-u^2}}  & \cellnum  \sec^{-1} u' &= \frac{u'}{u\sqrt{u^2-1}} \\
+        \cellnum \tan^{-1} u' &= \frac{u'}{u^2+1}  & \cellnum  \cot^{-1} u' &= \frac{-u'}{u^2+1}
     \end{align*}
 \end{minipage}
-\newline
+\newpage
 \section*{Unit 4}
 \begin{minipage}[t]{0.45\linewidth} 
     \textbf{Extreme Value Theorem} \\
@@ -71,7 +73,12 @@
 \hfill
 \begin{minipage}[t]{0.45\linewidth}
     \textbf{Rolle's Theorem} \\
-    \textbf{ethan this is your job} \\    
+    if: \\
+    $f$ is continuous on the closed interval $[a, b]$ \\
+    $f$ is differentiable on the open interval $(a, b)$ \\
+    $f(a) = f(b)$ \\
+    then: \\
+    There exists a value c on the interval $(a, b)$ such that $f'(c) = 0$ \\
 \end{minipage}
 \newline
 P = profit  \hfill  R = revenue  \hfill  C = cost  \hfill  p = price   
@@ -114,8 +121,28 @@ Fundamental Theorem of Calculus, extended \\
     %                 the notes packet says k(x)
     \frac{d}{dx} \int_{h(x)}^{g(x)} f(t)dt = f(g(x))\cdot g'(x) - f(h(x))\cdot h'(x) = \frac{d}{dx} [F(g(x)-F(h(x))]
 \end{equation*}
-indefinite integrals \\
-\textbf{this is also your job ethan} \\
+indefinite integrals: Do NOT forget the plus C \\
+{\setlength{\jot}{10pt}
+\begin{flalign*}
+    &\int k \,dx = kx + C & \\
+    &\int cf(x) \,dx = c\int f(x) \,dx & \\
+    &\int x^n \,dx = \frac{x^{n+1}}{n+1} + C \quad (n \neq -1) & \\
+    &\int e^x \,dx = e^x + C & \\
+    &\int \frac{1}{x} \,dx = ln|x| + C & \\
+    &\int a^x \,dx = \frac{a^x}{\ln(a)} + C & \\
+    &\int \sin(x) \,dx = -\cos(x) + C & \\
+    &\int \cos(x) \,dx = \sin(x) + C & \\
+    &\int \sec^2(x) \,dx = \tan(x) + C & \\
+    &\int \csc^2(x) \,dx = -\cot(x) + C & \\
+    &\int \sec(x)\tan(x) \,dx = \sec(x) + C & \\
+    &\int \csc(x)\cot(x) \,dx = -\csc(x) + C & \\
+    &\int \frac{1}{x^2 + 1} \,dx = \tan^{-1}(x) + C & \\
+    &\int \frac{1}{\sqrt{1-x^2}} \,dx = \sin^{-1}(x) + C & \\
+\end{flalign*}}
+%wewo wewo, this part below is mine
+%
+%{\setlength{\jot}{10pt}}
 
-
+\begin{gather}
+\end{gather}
 \end{document}
