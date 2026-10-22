@@ -1,0 +1,121 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{layout}
+\usepackage{blindtext}
+\usepackage[letterpaper, total={7.5in, 10in}]{geometry}
+
+\title{Math Study Sheets}
+\author{Gabriel Garcia, Ethan Woolard}
+\date{21th October 2026}
+
+\begin{document}
+
+\maketitle
+\section*{Trig Properties}
+
+\section*{Unit 3}
+%\arabic{footnote}
+\begin{minipage}[t]{0.45\textwidth}
+    \centering
+    \begin{gather}
+        \frac{d}{dx} (x^n)=nx^{n-1} \\
+        \frac{d}{dx} \ln u=\frac{u'}{u} \\
+        \frac{d}{dx} \log_{C}u'=\frac{u'}{u\ln C} \\
+        \frac{d}{dx} \frac{f(x)}{g(x)} = \frac{f'(x)g(x)-f(x)g'(x)}{(g(x))^2} \\
+        \frac{d}{dx} f(g(x)) = f'(g(x))g'(x) \\
+        \frac{d}{dx} \left(\frac{C}{x}\right) = \frac{-C}{x^2} \\
+        \frac{d}{dx} C^u = \ln{c} \cdot C^u \cdot u' \\
+        \frac{d}{dx} f(x) \cdot g(x) = f'(x)g(x) + f(x)g'(x)
+    \end{gather}  
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+    \centering
+    \begin{align*}
+        \sin u' &= \cos u \cdot u' & \csc u' &= -\csc u \cdot \cot u \cdot u' \\
+        \cos u' &= -\sin u \cdot u' & \sec u' &= \sec u \cdot \tan u \cdot u' \\
+        \tan u' &= \sec^2 u \cdot u' & \cot u' &= -\csc^2 u \cdot u' \\
+        \sin^{-1} u' &= \frac{u'}{\sqrt{1-u^2}} & \csc^{-1} u' &= \frac{-u'}{\sqrt{u^2-1}} \\
+        \cos^{-1} u' &= \frac{-u'}{\sqrt{1-u^2}} & \sec^{-1} u' &= \frac{u'}{\sqrt{u^2-1}} \\
+        \tan^{-1} u' &= \frac{u'}{u^2+1} & \cot^{-1} u' &= \frac{-u'}{u^2+1}
+    \end{align*}
+\end{minipage}
+\newline
+\section*{Unit 4}
+\begin{minipage}[t]{0.45\linewidth} 
+    \textbf{Extreme Value Theorem} \\
+    if: \\
+    $f$ is continuous on the closed interval $[a, b]$ \\
+    then: \\
+    there is an absolute max $f(c)$, and an absolute min $f(d)$, somewhere in $[a, b]$ \\    
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\linewidth}
+    \textbf{Fermat's Theorem}\\
+    if: \\
+    $f(c)$ is an absolute max or min \\
+    $f'(c)$ exists \\
+    then: \\
+    $f'(c) = 0$ \\    
+\end{minipage}
+\newline
+\begin{minipage}[t]{0.45\linewidth}
+    \textbf{Mean Value Theorem} \\
+    if: \\
+    $f$ is continuous on the closed interval $[a, b]$ \\
+    $f$ is differentiable on the open interval $(a, b)$ \\
+    then: \\
+    $f'(c) = \frac{f(b)-f(a)}{b - a}$ or $f(b) - f(a) = f'(c)(b - a)$ \\   
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\linewidth}
+    \textbf{Rolle's Theorem} \\
+    \textbf{ethan this is your job} \\    
+\end{minipage}
+\newline
+P = profit  \hfill  R = revenue  \hfill  C = cost  \hfill  p = price   
+\newline
+    $\frac{dR}{dx}=$ marginal revenue
+\newline
+a line such as $\bar{f}$ means average $f$, $\bar{f}=\frac{f(x)}{x}$ 
+\newpage
+\section*{Unit 5}
+$n = $ number of sub intervals \\
+both $i$ and $k$ are used as the variables representing summation \\
+$\Delta x = \frac{b - a}{n}$ \\
+$x_r = a+k\Delta x \qquad x_l = a+(k-1)\Delta x$ \\
+\newline
+\hfill left hand limit \hfill right hand limit \hfill
+\hfill \[ \lim_{n\to\infty} \sum_{k=1}^{n} f(a + (k-1)\Delta x) \Delta x \qquad \lim_{n\to\infty} \sum_{k=1}^{n} f(a + k\Delta x) \Delta x \] \hfill 
+some formulas \\
+\[ \sum_{i=1}^{\infty}Cn = n \qquad \sum_{i=1}^{\infty}i = \frac{n(n+1)}{2} \]
+\[ \sum_{i=1}^{\infty}i^2 = \frac{n(n+1)(2n+1)}{6} \qquad \sum_{i=1}^{\infty}i^3 = \left( \frac{n(n+1)}{2} \right)^2 \]
+\newline
+some properties \\
+\begin{gather}
+    \int_{b}^{a} f(x)dx = -\int_{a}^{b} f(x)dx \\
+    \int_{a}^{a} f(x)dx = 0 \\
+    \int_{a}^{b} Cdx = C(b-a) \\
+    \int_{a}^{b} Cf(x)dx = C\int_{a}^{b} f(x)dx \\
+    \int_{a}^{b} [f(x) + g(x)]dx = \int_{a}^{b} f(x)dx + \int_{a}^{b} g(x)dx \\
+    \int_{a}^{b} [f(x) - g(x)]dx = \int_{a}^{b} f(x)dx - \int_{a}^{b} g(x)dx \\
+    \int_{a}^{c} f(x)dx + \int_{c}^{b} f(x)dx = \int_{a}^{b} f(x)dx \\    
+\end{gather}
+\newline
+Fundamental Theorem of Calculus, part 1 \\
+if $g(x) = \int_{a}^{x}f(t)dt$, then $g'(x) = f(x)$ \\
+\newline
+Fundamental Theorem of Calculus, part 2 \\
+$\int_{a}^{b}f(x)dx = F(b) - F(a)$ where F is any antiderivative of $f$, that is $F' = f$ \\
+\newline
+Fundamental Theorem of Calculus, extended \\
+\begin{equation*}
+    %                 the notes packet says k(x)
+    \frac{d}{dx} \int_{h(x)}^{g(x)} f(t)dt = f(g(x))\cdot g'(x) - f(h(x))\cdot h'(x) = \frac{d}{dx} [F(g(x)-F(h(x))]
+\end{equation*}
+indefinite integrals \\
+\textbf{this is also your job ethan} \\
+
+
+\end{document}
